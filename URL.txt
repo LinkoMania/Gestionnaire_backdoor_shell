@@ -1,0 +1,3 @@
+https://your_website.com/PHPMailer/classMail.php
+Simple backdoor coded by chatGPT for use a shell in your website.
+Fake emplacement  for use the système jeton to email sending.
