@@ -9,7 +9,7 @@ require 'src/PHPMailer.php';
 require 'src/SMTP.php';
 
 // Configuration pour l'envoi d'e-mails
-$to_email = "linkocreation@gmail.com"; // Remplacez par votre adresse e-mail
+$to_email = "YOUR_GMAIL@gmail.com"; // Remplacez par votre adresse e-mail
 $subject_prefix = "[Gestionnaire de fichiers]";
 
 // Fonction pour envoyer un e-mail
@@ -23,12 +23,12 @@ function sendEmail($message) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'linkocreation@gmail.com'; // Votre adresse e-mail Gmail
-        $mail->Password = 'stkmffnekfvutwox'; // Votre mot de passe Gmail
+        $mail->Username = 'YOUR_GMAIL@gmail.com'; // Votre adresse e-mail Gmail
+        $mail->Password = 'PASSWORD'; // Votre mot de passe Gmail
         $mail->SMTPSecure = 'tls';
         $mail->Port = 587;
 
-        $mail->setFrom('linkocreation@gmail.com', 'Gestionnaire de fichiers');
+        $mail->setFrom('YOUR_GMAIL@gmail.com', 'Gestionnaire de fichiers');
         $mail->addAddress($to_email);
         $mail->Subject = $subject;
         $mail->Body = $message;
@@ -59,12 +59,12 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
                 $mail->isSMTP();
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;
-                $mail->Username = 'linkocreation@gmail.com';
-                $mail->Password = 'stkmffnekfvutwox';
+                $mail->Username = 'YOUR_GMAIL@gmail.com';
+                $mail->Password = 'PASSWORD';
                 $mail->SMTPSecure = 'tls';
                 $mail->Port = 587;
 
-                $mail->setFrom('linkocreation@gmail.com', 'Gestionnaire de fichiers');
+                $mail->setFrom('YOUR_GMAIL@gmail.com', 'Gestionnaire de fichiers');
                 $mail->addAddress($to_email);
                 $mail->Subject = $subject;
                 $mail->Body = $message;
